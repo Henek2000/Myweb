@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog - Henek</title>
+</head>
+<body>
+  <h1>Blog</h1>
+  <p>Here is where I'll write my blog posts.</p>
+  <a href="index.html">Back to Home</a>
+</body>
+</html>
