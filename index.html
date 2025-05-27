@@ -3,10 +3,15 @@
 <head>
   <title>Overlapping Cubes Layout</title>
   <style>
+    @font-face {
+      font-family: 'AestheticSans';
+      src: local('Segoe UI'), local('Helvetica Neue'), local('Arial');
+    }
+
     html, body {
       height: 100%;
       margin: 0;
-      font-family: sans-serif;
+      font-family: 'AestheticSans', sans-serif;
       color: white;
     }
 
@@ -29,7 +34,40 @@
 
     header, footer {
       background-color: black;
-      padding: 1rem;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-align: left;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+    }
+
+    .nav-button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-button:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
       text-align: center;
     }
 
@@ -43,23 +81,31 @@
 
     .content-box {
       background-color: black;
-      border-radius: 20px;
-      padding: 2rem;
-      max-width: 800px;
+      padding: 4rem;
+      max-width: 900px;
       width: 100%;
+      min-height: 60vh;
       box-shadow: 0 0 20px #000000aa;
+      border-radius: 32px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Website Header</h1>
+    <h1>Henek</h1>
   </header>
+
+  <nav>
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="blog.html" class="nav-button">Blog</a>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="contact.html" class="nav-button">Contact</a>
+  </nav>
 
   <main>
     <div class="content-box">
-      <h2>Welcome</h2>
-      <p>This is where your text and content will go. You can add projects, blog posts, or anything else here.</p>
+      <h2>Welcome to my website.</h2>
+      <p>This place serves as the main hub of everything or nothing that I will do. From writting blogs about topics I might be interested in, uploading photographs I take, follow different projects and whatever I might feel like putting up here.</p>
     </div>
   </main>
 
