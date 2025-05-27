@@ -2,10 +2,100 @@
 <html>
 <head>
   <title>Blog - Henek</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    body {
+      background: linear-gradient(to bottom right, #2e2e2e, #121212);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: black;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      text-align: left;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+    }
+
+    .nav-button {
+      background: none;
+      border: 2px solid white;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .nav-button:hover {
+      background: white;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .content-box {
+      background-color: #1a1a1a;
+      padding: 4rem;
+      max-width: 900px;
+      width: 100%;
+      min-height: 60vh;
+      box-shadow: 0 0 20px #000000aa;
+      border-radius: 32px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Blog</h1>
-  <p>Here is where I'll write my blog posts.</p>
-  <a href="index.html">Back to Home</a>
+  <header>
+    <h1>Blog</h1>
+  </header>
+
+  <nav>
+    <a href="index.html" class="nav-button">Home</a>
+    <a href="blog.html" class="nav-button">Blog</a>
+    <a href="projects.html" class="nav-button">Projects</a>
+    <a href="contact.html" class="nav-button">Contact</a>
+  </nav>
+
+  <main>
+    <div class="content-box">
+      <h2>Blog Posts</h2>
+      <p>Welcome to the blog. Updates and articles will be posted here.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Henek</p>
+  </footer>
 </body>
 </html>
