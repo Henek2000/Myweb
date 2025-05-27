@@ -1,39 +1,27 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Henek's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Overlapping Cubes Background</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      --s: 200px; /* control the size */
+      --c1: #0a1f15;
+      --c2: #1e573c;
+      --c3: #113524;
+      
+      background:
+        repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
+         calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
+        repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
+      background-size: var(--s) calc(var(--s)*tan(30deg));
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Henek</h1>
-    <p>Aspiring Aerospace Engineer & Designer</p>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a physics graduate currently studying aerospace engineering, passionate about rocket engines and self-sufficient tech.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Modular Linear Actuator</h3>
-      <p>Custom-designed actuator with 3D-printed parts and Siemens NX CAD. Optimized with FEM.</p>
-    </div>
-    <!-- Repeat project cards -->
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 Henek | <a href="https://github.com/yourgithub">GitHub</a></p>
-  </footer>
 </body>
 </html>
