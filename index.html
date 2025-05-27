@@ -1,27 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Overlapping Cubes Background</title>
+  <title>Overlapping Cubes Layout</title>
   <style>
     html, body {
       height: 100%;
       margin: 0;
+      font-family: sans-serif;
+      color: white;
     }
 
     body {
-      --s: 200px; /* control the size */
+      --s: 200px;
       --c1: #0a1f15;
       --c2: #1e573c;
       --c3: #113524;
-      
+
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
       background:
         repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 50%) 
          calc(var(--s)/2) calc(var(--s)*tan(30deg)/2),
         repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 50%);
       background-size: var(--s) calc(var(--s)*tan(30deg));
     }
+
+    header, footer {
+      background-color: black;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .content-box {
+      background-color: black;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 0 20px #000000aa;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>My Website Header</h1>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h2>Welcome</h2>
+      <p>This is where your text and content will go. You can add projects, blog posts, or anything else here.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Henek</p>
+  </footer>
 </body>
 </html>
